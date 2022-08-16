@@ -11,8 +11,11 @@ public class Main {
 
     public static void main(String[] args) {
         WordsChecker wordsChecker = new WordsChecker(text);
+        long startTime = System.currentTimeMillis();
         System.out.println(wordsChecker.hasWord("occaecat"));
         System.out.println(wordsChecker.hasWord("Lore"));
+        long stopTime = System.currentTimeMillis();
+        System.out.println("Длительность работы, в мс.: " + (stopTime - startTime));
     }
 }
 

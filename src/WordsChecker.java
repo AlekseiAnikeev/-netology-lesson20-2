@@ -7,14 +7,13 @@ import java.util.Set;
  * Date of creation: 13.08.2022
  */
 public class WordsChecker {
-    private final String text;
+    private Set<String> newText = new HashSet<>();
 
     public WordsChecker(String text) {
-        this.text = text;
-    }
-    public boolean hasWord(String word) {
-        Set<String> newText = new HashSet<>();
         Collections.addAll(newText, text.split("\\P{IsAlphabetic}+"));
+    }
+
+    public boolean hasWord(String word) {
         return newText.contains(word);
     }
 }
